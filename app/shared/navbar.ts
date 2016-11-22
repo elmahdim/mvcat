@@ -9,8 +9,8 @@ import {Component} from 'angular2/core';
                 <a class="navbar-brand" href="">{{brand}}</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                <li *ngFor="#link of links">
-                    <a href="">{{link}}</a>
+                <li>
+                    <a href="">Blog</a>
                 </li>
             </ul>
         </div>
@@ -19,5 +19,4 @@ import {Component} from 'angular2/core';
 })
 export class NavbarComponent {
     brand = 'MVCat';
-    links = ['Dashboard', 'All Posts', 'Add post', 'Categories', 'Tags']; 
 }

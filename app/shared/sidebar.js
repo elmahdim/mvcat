@@ -1,4 +1,4 @@
-System.register(['angular2/core', './shared/navbar', './dashboard/dashboard.component'], function(exports_1, context_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,35 +10,29 @@ System.register(['angular2/core', './shared/navbar', './dashboard/dashboard.comp
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, navbar_1, dashboard_component_1;
-    var AppComponent;
+    var core_1;
+    var SidebarComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (navbar_1_1) {
-                navbar_1 = navbar_1_1;
-            },
-            function (dashboard_component_1_1) {
-                dashboard_component_1 = dashboard_component_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            SidebarComponent = (function () {
+                function SidebarComponent() {
+                    this.links = ['Dashboard', 'All Posts', 'Add post', 'Categories', 'Tags'];
                 }
-                AppComponent = __decorate([
+                SidebarComponent = __decorate([
                     core_1.Component({
-                        selector: 'my-app',
-                        template: '<navbar></navbar><dashboard></dashboard>',
-                        directives: [navbar_1.NavbarComponent, dashboard_component_1.DashboardComponent]
+                        selector: 'sidebar',
+                        template: "\n    <div class=\"col-sm-3 col-md-2 sidebar\">\n        <ul class=\"nav nav-sidebar\">\n            <li *ngFor=\"#link of links\">\n                <a href=\"\">{{link}}</a>\n            </li>\n        </ul>\n    </div>\n    "
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], SidebarComponent);
+                return SidebarComponent;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("SidebarComponent", SidebarComponent);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=sidebar.js.map

@@ -21,12 +21,11 @@ System.register(['angular2/core'], function(exports_1, context_1) {
             NavbarComponent = (function () {
                 function NavbarComponent() {
                     this.brand = 'MVCat';
-                    this.links = ['Dashboard', 'All Posts', 'Add post', 'Categories', 'Tags'];
                 }
                 NavbarComponent = __decorate([
                     core_1.Component({
                         selector: 'navbar',
-                        template: "\n    <nav class=\"navbar navbar-inverse navbar-fixed-top\">\n        <div class=\"container-fluid\">\n            <div class=\"navbar-header\">\n                <a class=\"navbar-brand\" href=\"\">{{brand}}</a>\n            </div>\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li *ngFor=\"#link of links\">\n                    <a href=\"\">{{link}}</a>\n                </li>\n            </ul>\n        </div>\n    </nav>\n    "
+                        template: "\n    <nav class=\"navbar navbar-inverse navbar-fixed-top\">\n        <div class=\"container-fluid\">\n            <div class=\"navbar-header\">\n                <a class=\"navbar-brand\" href=\"\">{{brand}}</a>\n            </div>\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li>\n                    <a href=\"\">Blog</a>\n                </li>\n            </ul>\n        </div>\n    </nav>\n    "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], NavbarComponent);

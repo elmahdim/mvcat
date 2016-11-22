@@ -1,4 +1,4 @@
-System.register(['angular2/core'], function(exports_1, context_1) {
+System.register(['angular2/core', '../shared/sidebar'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,12 +10,15 @@ System.register(['angular2/core'], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, sidebar_1;
     var DashboardComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (sidebar_1_1) {
+                sidebar_1 = sidebar_1_1;
             }],
         execute: function() {
             DashboardComponent = (function () {
@@ -24,7 +27,8 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 DashboardComponent = __decorate([
                     core_1.Component({
                         selector: 'dashboard',
-                        template: '<h1>Dashboard</h1>'
+                        template: "\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <sidebar></sidebar>\n            <div class=\"col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main\">\n                <h1 class=\"page-header\">Dashboard</h1>\n            </div>\n        </div>\n    </div>\n    ",
+                        directives: [sidebar_1.SidebarComponent]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], DashboardComponent);
