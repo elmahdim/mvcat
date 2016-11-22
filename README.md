@@ -1,20 +1,24 @@
-# MVCat
+# MVCat AngularJS 
 
-Real world example to practice, and get more comfortable with MV* frameworks.
+ This example seed is based on [angular2 quickstart](https://github.com/elmahdim/angular2-course) project by Mosh Hamedani with further changes by [Mahmoud Elmahdi](https://github.com/elmahdim)
 
-## Application
+## Get started
 
-Clone of WP Posts as application implemented using popular frameworks.
+```
+git clone https://github.com/elmahdim/mvcat.git
+cd path-to/mvcat
+git fetch
+git checkout angular2
+```
 
-### Mockup
+## Install required dependencies
+make sure you're still in the project directory
+```
+npm i -g typescript
+npm i 
+```
 
-**Dashboard**
-* Posts
-* Categories
-* Add new
-* Tags
-
-**Main**
-* All Posts
-  * Filter functionality
-* View single post
+## Up and running
+```
+npm start
+```
