@@ -1,4 +1,4 @@
-System.register(['angular2/core', './shared/navbar', './dashboard/dashboard.component'], function(exports_1, context_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,35 +10,28 @@ System.register(['angular2/core', './shared/navbar', './dashboard/dashboard.comp
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, navbar_1, dashboard_component_1;
-    var AppComponent;
+    var core_1;
+    var DashboardComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (navbar_1_1) {
-                navbar_1 = navbar_1_1;
-            },
-            function (dashboard_component_1_1) {
-                dashboard_component_1 = dashboard_component_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            DashboardComponent = (function () {
+                function DashboardComponent() {
                 }
-                AppComponent = __decorate([
+                DashboardComponent = __decorate([
                     core_1.Component({
-                        selector: 'my-app',
-                        template: '<navbar></navbar><h1>MVCat AngularJS</h1><dashboard></dashboard>',
-                        directives: [navbar_1.NavbarComponent, dashboard_component_1.DashboardComponent]
+                        selector: 'dashboard',
+                        template: '<h1>Dashboard</h1>'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], DashboardComponent);
+                return DashboardComponent;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("DashboardComponent", DashboardComponent);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=dashboard.component.js.map
