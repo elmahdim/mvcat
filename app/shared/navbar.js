@@ -1,4 +1,4 @@
-System.register(['angular2/core', './shared/navbar'], function(exports_1, context_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,32 +10,30 @@ System.register(['angular2/core', './shared/navbar'], function(exports_1, contex
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, navbar_1;
-    var AppComponent;
+    var core_1;
+    var NavbarComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (navbar_1_1) {
-                navbar_1 = navbar_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            NavbarComponent = (function () {
+                function NavbarComponent() {
+                    this.brand = 'MVCat';
+                    this.links = ['Dashboard', 'All Posts', 'Add post', 'Categories', 'Tags'];
                 }
-                AppComponent = __decorate([
+                NavbarComponent = __decorate([
                     core_1.Component({
-                        selector: 'my-app',
-                        template: '<navbar></navbar><h1>MVCat AngularJS</h1>',
-                        directives: [navbar_1.NavbarComponent]
+                        selector: 'navbar',
+                        template: "\n    <nav class=\"navbar navbar-inverse navbar-fixed-top\">\n        <div class=\"container-fluid\">\n            <div class=\"navbar-header\">\n                <a class=\"navbar-brand\" href=\"\">{{brand}}</a>\n            </div>\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li *ngFor=\"#link of links\">\n                    <a href=\"\">{{link}}</a>\n                </li>\n            </ul>\n        </div>\n    </nav>\n    "
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], NavbarComponent);
+                return NavbarComponent;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("NavbarComponent", NavbarComponent);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=navbar.js.map
