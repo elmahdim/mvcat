@@ -8,9 +8,14 @@ import { Component } from '@angular/core';
             <div class="navbar-header">
                 <a class="navbar-brand" href="">{{title}}</a>
             </div>
+            <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <a routerLink="/dashboard">Dashboard</a>
+                </li>
+            </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="">Blog</a>
+                    <a routerLink="/">Blog</a>
                 </li>
             </ul>
         </div>

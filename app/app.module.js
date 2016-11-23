@@ -10,22 +10,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var router_1 = require('@angular/router');
 var app_component_1 = require('./app.component');
 var navbar_1 = require('./shared/navbar');
 var sidebar_1 = require('./shared/sidebar');
 var dashboard_component_1 = require('./dashboard/dashboard.component');
+var appRoutes = [
+    { path: '', component: app_component_1.AppComponent },
+    { path: 'dashboard', component: dashboard_component_1.DashboardComponent }
+];
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
+            imports: [platform_browser_1.BrowserModule, router_1.RouterModule.forRoot(appRoutes)],
             declarations: [app_component_1.AppComponent, navbar_1.NavbarComponent, dashboard_component_1.DashboardComponent, sidebar_1.SidebarComponent],
-            bootstrap: [app_component_1.AppComponent, navbar_1.NavbarComponent, sidebar_1.SidebarComponent]
+            bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);
     return AppModule;
 }());
 exports.AppModule = AppModule;
+// , NavbarComponent, SidebarComponent 
 //# sourceMappingURL=app.module.js.map
