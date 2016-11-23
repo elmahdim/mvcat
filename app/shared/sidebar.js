@@ -11,12 +11,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var SidebarComponent = (function () {
     function SidebarComponent() {
-        this.links = ['Dashboard', 'All Posts', 'Add post', 'Categories', 'Tags'];
+        this.SidebarMenu = [
+            {
+                'route': 'posts',
+                'title': 'All Posts'
+            },
+            {
+                'route': 'posts/new',
+                'title': 'Add post'
+            },
+            {
+                'route': 'categories',
+                'title': 'Categories'
+            },
+            {
+                'route': 'tags',
+                'title': 'Tags'
+            }
+        ];
     }
     SidebarComponent = __decorate([
         core_1.Component({
             selector: 'sidebar',
-            template: "\n    <div class=\"col-sm-3 col-md-2 sidebar\">\n        <ul class=\"nav nav-sidebar\">\n            <li *ngFor=\"let link of links\">\n                <a href=\"\">{{link}}</a>\n            </li>\n        </ul>\n    </div>\n    "
+            template: "\n    <div class=\"col-sm-3 col-md-2 sidebar\">\n        <ul class=\"nav nav-sidebar\">\n            <li *ngFor=\"let item of SidebarMenu\">\n                <a href={{item.route}}>{{item.title}}</a>\n            </li>\n        </ul>\n    </div>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], SidebarComponent);
