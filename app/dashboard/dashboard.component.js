@@ -15,7 +15,7 @@ var DashboardComponent = (function () {
     DashboardComponent = __decorate([
         core_1.Component({
             selector: 'dashboard',
-            template: "\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <sidebar></sidebar>\n            <div class=\"col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main\">\n                <h1 class=\"page-header\">Dashboard</h1>\n            </div>\n        </div>\n    </div>\n    "
+            template: "\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <sidebar></sidebar>\n            <div class=\"col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main\">\n                <h1 class=\"page-header\">Dashboard</h1>\n                <div class=\"panel panel-default\">\n                    <div class=\"panel-body\">\n                        <p class=\"lead\">Welcome to MVCat AngularJS</p>\n                        <p>Real world example to practice, and get more comfortable with MV* frameworks.</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], DashboardComponent);

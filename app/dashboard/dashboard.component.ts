@@ -9,6 +9,12 @@ import {SidebarComponent} from '../shared/sidebar';
             <sidebar></sidebar>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
                 <h1 class="page-header">Dashboard</h1>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <p class="lead">Welcome to MVCat AngularJS</p>
+                        <p>Real world example to practice, and get more comfortable with MV* frameworks.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
