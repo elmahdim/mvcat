@@ -23,7 +23,7 @@ export class SidebarComponent {
             'title':'Add post'
         },
         {
-            'route':'',
+            'route':'/categories',
             'title':'Categories'
         },
         {

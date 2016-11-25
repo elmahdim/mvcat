@@ -17,11 +17,13 @@ var sidebar_1 = require('./shared/sidebar');
 var dashboard_component_1 = require('./dashboard/dashboard.component');
 var posts_component_1 = require('./posts/posts.component');
 var new_component_1 = require('./posts/new.component');
+var categories_component_1 = require('./categories/categories.component');
 var appRoutes = [
     { path: '', component: app_component_1.AppComponent },
     { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
     { path: 'posts', component: posts_component_1.PostsComponent },
-    { path: 'posts/new', component: new_component_1.NewPostComponent }
+    { path: 'posts/new', component: new_component_1.NewPostComponent },
+    { path: 'categories', component: categories_component_1.CategoriesComponent }
 ];
 var AppModule = (function () {
     function AppModule() {
@@ -29,7 +31,7 @@ var AppModule = (function () {
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, router_1.RouterModule.forRoot(appRoutes)],
-            declarations: [app_component_1.AppComponent, navbar_1.NavbarComponent, dashboard_component_1.DashboardComponent, sidebar_1.SidebarComponent, posts_component_1.PostsComponent, new_component_1.NewPostComponent],
+            declarations: [app_component_1.AppComponent, navbar_1.NavbarComponent, dashboard_component_1.DashboardComponent, sidebar_1.SidebarComponent, posts_component_1.PostsComponent, new_component_1.NewPostComponent, categories_component_1.CategoriesComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
