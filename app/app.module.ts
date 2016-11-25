@@ -9,18 +9,20 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PostsComponent } from './posts/posts.component';
 import { NewPostComponent } from './posts/new.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { TagsComponent } from './tags/tags.component';
 
 const appRoutes: Routes = [
   { path: '', component: AppComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'posts', component: PostsComponent },
   { path: 'posts/new', component: NewPostComponent },
-  { path: 'categories', component: CategoriesComponent }
+  { path: 'categories', component: CategoriesComponent },
+  { path: 'tags', component: TagsComponent }
 ];
 
 @NgModule({
   imports:      [ BrowserModule, RouterModule.forRoot(appRoutes) ],
-  declarations: [ AppComponent, NavbarComponent, DashboardComponent, SidebarComponent, PostsComponent, NewPostComponent, CategoriesComponent ],
+  declarations: [ AppComponent, NavbarComponent, DashboardComponent, SidebarComponent, PostsComponent, NewPostComponent, CategoriesComponent, TagsComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

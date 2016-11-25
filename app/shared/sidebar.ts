@@ -27,7 +27,7 @@ export class SidebarComponent {
             'title':'Categories'
         },
         {
-            'route':'',
+            'route':'/tags',
             'title':'Tags'
         }
     ];

@@ -25,7 +25,7 @@ var SidebarComponent = (function () {
                 'title': 'Categories'
             },
             {
-                'route': '',
+                'route': '/tags',
                 'title': 'Tags'
             }
         ];
