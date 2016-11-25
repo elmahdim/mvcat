@@ -11,10 +11,10 @@ import { SidebarComponent } from '../shared/sidebar';
                 <h1 class="page-header">Posts <a class="btn btn-default btn-sm" routerLink="/posts/new">Add new</a></h1>
                 <div class="row form-group">
                     <div class="col-sm-6">
-                        <ul class="list-inline small">
-                            <li>All (12)</li>
-                            <li>Published (10)</li>
-                            <li>Trash (2)</li>
+                        <ul class="list-inline text-muted small">
+                            <li><span class="text-primary">All</span> (12)</li>
+                            <li><span class="text-primary">Published</span>  (10)</li>
+                            <li><span class="text-primary">Trash</span> (2)</li>
                         </ul>
                     </div>
                     <div class="col-sm-4 pull-right">
