@@ -13,19 +13,19 @@ var SidebarComponent = (function () {
     function SidebarComponent() {
         this.SidebarMenu = [
             {
-                'route': 'posts',
+                'route': '/posts',
                 'title': 'All Posts'
             },
             {
-                'route': 'posts/new',
+                'route': '/posts/new',
                 'title': 'Add post'
             },
             {
-                'route': 'categories',
+                'route': '',
                 'title': 'Categories'
             },
             {
-                'route': 'tags',
+                'route': '',
                 'title': 'Tags'
             }
         ];
@@ -33,7 +33,7 @@ var SidebarComponent = (function () {
     SidebarComponent = __decorate([
         core_1.Component({
             selector: 'sidebar',
-            template: "\n    <div class=\"col-sm-3 col-md-2 sidebar\">\n        <ul class=\"nav nav-sidebar\">\n            <li *ngFor=\"let item of SidebarMenu\">\n                <a href={{item.route}}>{{item.title}}</a>\n            </li>\n        </ul>\n    </div>\n    "
+            template: "\n    <div class=\"col-sm-3 col-md-2 sidebar\">\n        <ul class=\"nav nav-sidebar\">\n            <li *ngFor=\"let item of SidebarMenu\">\n                <a routerLink=\"{{item.route}}\">{{item.title}}</a>\n            </li>\n        </ul>\n    </div>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], SidebarComponent);

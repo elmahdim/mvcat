@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     <div class="col-sm-3 col-md-2 sidebar">
         <ul class="nav nav-sidebar">
             <li *ngFor="let item of SidebarMenu">
-                <a href={{item.route}}>{{item.title}}</a>
+                <a routerLink="{{item.route}}">{{item.title}}</a>
             </li>
         </ul>
     </div>
@@ -15,19 +15,19 @@ import { Component } from '@angular/core';
 export class SidebarComponent {
     SidebarMenu = [
         {
-            'route':'posts',
+            'route':'/posts',
             'title':'All Posts'
         },
         {
-            'route':'posts/new',
+            'route':'/posts/new',
             'title':'Add post'
         },
         {
-            'route':'categories',
+            'route':'',
             'title':'Categories'
         },
         {
-            'route':'tags',
+            'route':'',
             'title':'Tags'
         }
     ];

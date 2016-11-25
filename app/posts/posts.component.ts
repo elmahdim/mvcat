@@ -8,7 +8,7 @@ import { SidebarComponent } from '../shared/sidebar';
         <div class="row">
             <sidebar></sidebar>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <h1 class="page-header">Posts <a href="" class="btn btn-default btn-sm">Add new</a></h1>
+                <h1 class="page-header">Posts <a class="btn btn-default btn-sm" routerLink="/posts/new">Add new</a></h1>
                 <div class="row form-group">
                     <div class="col-sm-6">
                         <ul class="list-inline small">

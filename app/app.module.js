@@ -16,10 +16,12 @@ var navbar_1 = require('./shared/navbar');
 var sidebar_1 = require('./shared/sidebar');
 var dashboard_component_1 = require('./dashboard/dashboard.component');
 var posts_component_1 = require('./posts/posts.component');
+var new_component_1 = require('./posts/new.component');
 var appRoutes = [
     { path: '', component: app_component_1.AppComponent },
     { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
-    { path: 'posts', component: posts_component_1.PostsComponent }
+    { path: 'posts', component: posts_component_1.PostsComponent },
+    { path: 'posts/new', component: new_component_1.NewPostComponent }
 ];
 var AppModule = (function () {
     function AppModule() {
@@ -27,7 +29,7 @@ var AppModule = (function () {
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, router_1.RouterModule.forRoot(appRoutes)],
-            declarations: [app_component_1.AppComponent, navbar_1.NavbarComponent, dashboard_component_1.DashboardComponent, sidebar_1.SidebarComponent, posts_component_1.PostsComponent],
+            declarations: [app_component_1.AppComponent, navbar_1.NavbarComponent, dashboard_component_1.DashboardComponent, sidebar_1.SidebarComponent, posts_component_1.PostsComponent, new_component_1.NewPostComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
@@ -35,5 +37,4 @@ var AppModule = (function () {
     return AppModule;
 }());
 exports.AppModule = AppModule;
-// , NavbarComponent, SidebarComponent 
 //# sourceMappingURL=app.module.js.map
