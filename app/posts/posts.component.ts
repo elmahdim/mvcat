@@ -71,10 +71,10 @@ import { SidebarComponent } from '../shared/sidebar';
                             <input type="checkbox" />
                             </th>
                             <th>Title</th>
-                            <th>Categories</th>
+                            <th class="text-center">Categories</th>
                             <th>Tags</th>
                             <th>Date</th>
-                            <th>Actions</th>
+                            <th class="text-center">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -83,16 +83,16 @@ import { SidebarComponent } from '../shared/sidebar';
                             <input type="checkbox" />
                             </td>
                             <td>{{post.title}}</td>
-                            <td>{{post.category}}</td>
+                            <td class="text-center">{{post.category}}</td>
                             <td>
                                 <ul class="list-inline">
                                     <li *ngFor="let tag of post.tags"><span class="label label-default">{{tag}}</span></li>
                                 </ul>
                             </td>
                             <td>{{post.created_at}}</td>
-                            <td>
-                                <a href="">Edit</a>
-                                <a href="">Trash</a>
+                            <td class="text-center">
+                                <button class="btn btn-default btn-sm" type="button"><span class="glyphicon glyphicon-pencil"></span></button>
+                                <button class="btn btn-default btn-sm" type="button"><span class="glyphicon glyphicon-trash"></span></button>
                             </td>
                         </tr>
                         <tr>
@@ -103,10 +103,7 @@ import { SidebarComponent } from '../shared/sidebar';
                             <td>Uncategorized</td>
                             <td>1tags, tag2, tag3</td>
                             <td>2016/11/23</td>
-                            <td>
-                                <a href="">Edit</a>
-                                <a href="">Trash</a>
-                            </td>
+                            <td>&nbsp;</td>
                         </tr>
                     </tbody>
                 </table>
