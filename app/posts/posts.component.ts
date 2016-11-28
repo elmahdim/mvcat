@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { SidebarComponent } from '../shared/sidebar';
 
 @Component({
@@ -78,14 +78,18 @@ import { SidebarComponent } from '../shared/sidebar';
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr *ngFor="let post of posts.data">
                             <td>
                             <input type="checkbox" />
                             </td>
-                            <td>Title</td>
-                            <td>Uncategorized</td>
-                            <td>No tags</td>
-                            <td>2016/11/23</td>
+                            <td>{{post.title}}</td>
+                            <td>{{post.category}}</td>
+                            <td>
+                                <ul class="list-inline">
+                                    <li *ngFor="let tag of post.tags"><span class="label label-default">{{tag}}</span></li>
+                                </ul>
+                            </td>
+                            <td>{{post.created_at}}</td>
                             <td>
                                 <a href="">Edit</a>
                                 <a href="">Trash</a>
@@ -112,4 +116,6 @@ import { SidebarComponent } from '../shared/sidebar';
     `
 })
 
-export class PostsComponent {}
+export class PostsComponent {
+    constructor(@Inject('posts') private posts){}
+}

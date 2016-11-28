@@ -19,6 +19,7 @@ var posts_component_1 = require('./posts/posts.component');
 var new_component_1 = require('./posts/new.component');
 var categories_component_1 = require('./categories/categories.component');
 var tags_component_1 = require('./tags/tags.component');
+var posts_service_1 = require('./posts/posts.service');
 var appRoutes = [
     { path: '', component: app_component_1.AppComponent },
     { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
@@ -34,7 +35,8 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, router_1.RouterModule.forRoot(appRoutes)],
             declarations: [app_component_1.AppComponent, navbar_1.NavbarComponent, dashboard_component_1.DashboardComponent, sidebar_1.SidebarComponent, posts_component_1.PostsComponent, new_component_1.NewPostComponent, categories_component_1.CategoriesComponent, tags_component_1.TagsComponent],
-            bootstrap: [app_component_1.AppComponent]
+            bootstrap: [app_component_1.AppComponent],
+            providers: [{ provide: 'posts', useClass: posts_service_1.PostsService }]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

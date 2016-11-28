@@ -10,6 +10,7 @@ import { PostsComponent } from './posts/posts.component';
 import { NewPostComponent } from './posts/new.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { TagsComponent } from './tags/tags.component';
+import { PostsService } from './posts/posts.service';
 
 const appRoutes: Routes = [
   { path: '', component: AppComponent },
@@ -23,6 +24,7 @@ const appRoutes: Routes = [
 @NgModule({
   imports:      [ BrowserModule, RouterModule.forRoot(appRoutes) ],
   declarations: [ AppComponent, NavbarComponent, DashboardComponent, SidebarComponent, PostsComponent, NewPostComponent, CategoriesComponent, TagsComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers:    [{provide:'posts', useClass:PostsService}]
 })
 export class AppModule { }
